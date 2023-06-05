@@ -13,9 +13,3 @@ window.onscroll = () => {
 // let person = prompt("What is your name:", "User")
 const nickname = document.getElementById("nickname");
 nickname.innerHTML = person;
-
-let item = document.querySelector('#revou-spin')
-
-item.addEventListener('mouseover', () => {
-    item.classList.add('spin-active')
-})
