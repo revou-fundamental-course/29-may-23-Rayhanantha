@@ -20,16 +20,24 @@
 				alt="revou-logo"
 			/>
 			<div class="nav-box">
-				<a class="nav-title" href="">Home</a>
-				<a class="nav-title" href="profile.html">Our Profile</a>
-				<a class="nav-title" href="">Portofolio</a>
-				<a class="nav-title" href="">Message Us</a>
+				<a class="nav-title" href="#">Home</a>
+				<a class="nav-title" href="profile.html">My Profile</a>
+				<a class="nav-title" href="#">Portofolio</a>
+				<a class="nav-title" href="#">Message Us</a>
 			</div>
 		</nav>
 		<section id="home">
 			<div id="welcome-page" class="page-container">
-				<h1>Hi, <span id="nickname"></span></h1>
+				<video autoplay muted loop id="bg-video">
+					<source
+						src="https://assets.mixkit.co/videos/preview/mixkit-workgroup-gets-excited-about-a-deal-closed-32834-large.mp4""
+						type="video/mp4"
+					/>
+				</video>
+				</video>
+				<h1>Hi, <span id="nickname">User</span></h1>
 				<h2>Ini adalah website latihan pertama</h2>
+				<p id="hiddentxt" class="hidden" style="color: violet;">serius bang baru pertama</p>
 			</div>
 			<div id="headquarter-page" class="page-container">
 				<h1>Our Headquater</h1>
@@ -74,7 +82,7 @@
 			<div id="message-page" class="page-container">
 				<h1>Message Us</h1>
 				<div class="message-container">
-					<form class="message-box">
+					<form class="message-box" onsubmit="submitForm(); return false">
 						<table>
 							<tr>
 								<td><label for="name">Nama</label></td>
@@ -113,7 +121,6 @@
 										id="male"
 										value="Laki-laki"
 										required
-										checked
 									/>
 									<label for="male">Laki-laki</label>
 									<input
@@ -121,8 +128,18 @@
 										name="gender"
 										id="female"
 										value="Perempuan"
+										required
 									/>
 									<label for="female">Perempuan</label>
+									<input
+										type="radio"
+										name="gender"
+										id="others"
+										value="Wallmart Bag"
+										required
+										checked
+									/>
+									<label for="others">Wallmart Bag</label>
 								</td>
 							</tr>
 							<tr>
@@ -142,7 +159,7 @@
 							</tr>
 							<tr>
 								<td colspan="3">
-									<input type="button" id="submit-btn" value="SUBMIT" />
+									<input type="submit" id="submit-btn" value="SUBMIT" />
 								</td>
 							</tr>
 						</table>
