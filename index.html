@@ -9,7 +9,7 @@
 			href="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/a32f81155cd0d4f16d36aef74f7d2644.png"
 			type="image/x-icon"
 		/>
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="css/index.css" />
 		<title>Homepage</title>
 	</head>
 	<body>
@@ -21,51 +21,143 @@
 			/>
 			<div class="nav-box">
 				<a class="nav-title" href="">Home</a>
-				<a class="nav-title" href="">Our Profile</a>
+				<a class="nav-title" href="profile.html">Our Profile</a>
 				<a class="nav-title" href="">Portofolio</a>
 				<a class="nav-title" href="">Message Us</a>
 			</div>
 		</nav>
 		<section id="home">
-			<div class="page-container">
+			<div id="welcome-page" class="page-container">
 				<h1>Hi, <span id="nickname"></span></h1>
 				<h2>Ini adalah website latihan pertama</h2>
 			</div>
-			<div class="page-container">
+			<div id="headquarter-page" class="page-container">
 				<h1>Our Headquater</h1>
 				<div class="hq-img-container">
-					<div class="hq-box">
-						<img
-							id="jakart"
-							class="hq-img"
-							src="https://media.istockphoto.com/id/118307909/photo/jakarta-cityscape.jpg?s=612x612&w=0&k=20&c=P8_fq3yyDSJSjkJVQKjvfOmSmr5-4AgRd4gVlvrWXWc="
-							alt="jakarta"
-						/>
-						<a href="#">Jakarta</a>
+					<div>
+						<a href="" class="hq-box">
+							<img
+								id="jakarta"
+								class="hq-img"
+								src="https://media.istockphoto.com/id/118307909/photo/jakarta-cityscape.jpg?s=612x612&w=0&k=20&c=P8_fq3yyDSJSjkJVQKjvfOmSmr5-4AgRd4gVlvrWXWc="
+								alt="jakarta"
+							/>
+							<h1>Jakarta</h1>
+						</a>
 					</div>
-					<div class="hq-box">
-						<img
-							class="hq-img"
-							src="https://media.istockphoto.com/id/118307909/photo/jakarta-cityscape.jpg?s=612x612&w=0&k=20&c=P8_fq3yyDSJSjkJVQKjvfOmSmr5-4AgRd4gVlvrWXWc="
-							alt="jakarta"
-						/>
-						<a href="#">Bandung</a>
+					<div>
+						<a href="" class="hq-box">
+							<img
+								id="bandung"
+								class="hq-img"
+								src="https://media.istockphoto.com/id/118307909/photo/jakarta-cityscape.jpg?s=612x612&w=0&k=20&c=P8_fq3yyDSJSjkJVQKjvfOmSmr5-4AgRd4gVlvrWXWc="
+								alt="jakarta"
+							/>
+							<h1>Bandung</h1>
+						</a>
 					</div>
-					<div class="hq-box">
-						<img
-							class="hq-img"
-							src="https://media.istockphoto.com/id/118307909/photo/jakarta-cityscape.jpg?s=612x612&w=0&k=20&c=P8_fq3yyDSJSjkJVQKjvfOmSmr5-4AgRd4gVlvrWXWc="
-							alt="surabaya"
-						/>
-						<a href="#">Surabaya</a>
+					<div>
+						<a href="" class="hq-box">
+							<img
+								id="surabaya"
+								class="hq-img"
+								src="https://media.istockphoto.com/id/118307909/photo/jakarta-cityscape.jpg?s=612x612&w=0&k=20&c=P8_fq3yyDSJSjkJVQKjvfOmSmr5-4AgRd4gVlvrWXWc="
+								alt="surabaya"
+							/>
+							<h1>Surabaya</h1>
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="message-us">
-			<div class="page-container">
+			<div id="message-page" class="page-container">
 				<h1>Message Us</h1>
-				<div class="msg-us-container"></div>
+				<div class="message-container">
+					<form class="message-box">
+						<table>
+							<tr>
+								<td><label for="name">Nama</label></td>
+								<td class="span">:</td>
+								<td>
+									<input
+										type="text"
+										name="name"
+										id="name"
+										placeholder="Nama"
+										minlength="0"
+										maxlength="50"
+										required
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="birth-date">Tanggal Lahir</label></td>
+								<td class="span">:</td>
+								<td>
+									<input
+										type="date"
+										name="birth-date"
+										id="birth-date"
+										required
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="gender">Jenis Kelamin</label></td>
+								<td class="span">:</td>
+								<td>
+									<input
+										type="radio"
+										name="gender"
+										id="male"
+										value="Laki-laki"
+										required
+										checked
+									/>
+									<label for="male">Laki-laki</label>
+									<input
+										type="radio"
+										name="gender"
+										id="female"
+										value="Perempuan"
+									/>
+									<label for="female">Perempuan</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="pesan"><label for="message">Pesan</label></td>
+								<td class="span">:</td>
+								<td>
+									<textarea
+										name="message"
+										id="message"
+										cols="50"
+										rows="4"
+										minlength="0"
+										maxlength="350"
+										placeholder="Pesan Anda"
+									></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<input type="button" id="submit-btn" value="SUBMIT" />
+								</td>
+							</tr>
+						</table>
+					</form>
+					<aside class="message-sent">
+						<p id="current-time">Current Time :</p>
+						<br /><br />
+						<div>
+							<p id="fullname">Nama :</p>
+							<p id="birth-date">Tanggal Lahir :</p>
+							<p id="gender">Jenis Kelamin :</p>
+							<p id="message">Pesan :</p>
+						</div>
+					</aside>
+				</div>
 			</div>
 		</section>
 		<footer>
@@ -73,6 +165,6 @@
 				<h3>Created by RevoU</h3>
 			</div>
 		</footer>
-		<script src="index.js"></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
